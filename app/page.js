@@ -1,9 +1,11 @@
+"use client";
 import Image from "next/image";
+import { Button } from "@heroui/react";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start ">
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -13,7 +15,7 @@ export default function Home() {
           priority
         />
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
+          <li className="mb-2 tracking-[-.01em] ">
             Get started by editing{" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
               app/page.js
@@ -49,6 +51,12 @@ export default function Home() {
           >
             Read our docs
           </a>
+          <Button
+            className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+            radius="full"
+          >
+            HeroUI
+          </Button>
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
