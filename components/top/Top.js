@@ -12,7 +12,7 @@ export default function Top() {
         className="m-1"
       />
       <Card>
-        <CardBody className="min-w-[600px] max-w-[640px]">
+        <CardBody className="min-w-[600px] max-w-[640px] text-white" style={{backgroundColor: "rgb(222, 112, 112)"}}>
           <div className="flex items-center justify-between font-bold text-lg tracking-widest">
             <div className="">LAI CHEE HOONG</div>
             <Button
@@ -20,16 +20,16 @@ export default function Top() {
               aria-label="lang"
               color="default"
               radius="full"
-              variant="light"
+              variant="flat"
             >
-              <TranslateIcon className="text-slate-400" />
+              <TranslateIcon className="text-white" />
             </Button>
           </div>
-          <div className="tracking-widest text-default-500 ">
+          <div className="tracking-widest  ">
             <div>Web Developer</div>
           </div>
           <Divider className="my-1" />
-          <div className="py-1 text-small text-default-500">
+          <div className="py-1 text-small tracking-wider">
             {` I'm an amateur Web Developer with 4+ years experience in making web
                 pages with React, Redux, RESTful API, Node.js, Express, Mongoose,
                 and MongoDB. My learning comes from online courses Udemy, Stack
