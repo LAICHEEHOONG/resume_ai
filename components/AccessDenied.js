@@ -1,8 +1,4 @@
-// pages/access-denied.tsx
-import BlockIcon from '@mui/icons-material/Block';
 import { ImBlocked } from "react-icons/im";
-// import Link from 'next/link'
-import Link from 'next/link';
 
 export default function AccessDenied() {
   return (
@@ -15,12 +11,7 @@ export default function AccessDenied() {
         <p className="text-gray-600 mb-6">
           {`You don't have permission to view this page.`}
         </p>
-        {/* <Link href="/">
-          <div className="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-xl transition">
-            Go Back Home
-          </div>
-        </Link> */}
       </div>
     </div>
-  )
+  );
 }
