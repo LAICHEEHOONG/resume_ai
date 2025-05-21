@@ -1,5 +1,3 @@
-
-
 // import { Image, Card, CardBody, Button, Divider } from "@heroui/react";
 // import TranslateIcon from "@mui/icons-material/Translate";
 // import { TypeAnimation } from "react-type-animation";
@@ -92,23 +90,37 @@ export default function Top() {
   const language = useSelector((state) => state.language?.language);
   const name = useSelector((state) => state.language?.name[language]);
   const title = useSelector((state) => state.language?.title[language]);
-  const description = useSelector((state) => state.language.description[language]);
+  const description = useSelector(
+    (state) => state.language.description[language]
+  );
 
   return (
-    <div className="flex gap-5 justify-between items-center bg-white rounded-lg shadow-lg p-4">
-      {/* <Image
-        alt="laicheehoong_img"
-        src="/images/laicheehoong.jpg"
-        width={215}
-        isBlurred
-        radius="full"
-        className=""
-        
-      /> */}
-       <Avatar isBordered    src="/images/laicheehoong.jpg" className="w-52 h-52" />
-      <Card>
+    <div className="flex gap-5 m-5">
+      <div>
+        <Avatar
+          src="/images/laicheehoong_2.jpeg"
+          className="w-[10rem] h-[10rem] border-5 border-white"
+        />
+      </div>
+      <div className="flex flex-col justify-center">
+        <div className="text-2xl font-extrabold tracking-widest">
+          Lai Chee Hoong
+        </div>
+        <div className="text-default-400 tracking-widest">
+          Web Developer, Stock Keeper and Sales
+        </div>
+        <div className="text-small mt-2">
+          {`I began web development in 2019 and enjoy building modern apps with
+          Next.js, React, Redux, MongoDB, and Tailwind CSS. I'm skilled in
+          creating RESTful APIs using Node.js, Express, and Mongoose. I learn
+          from Udemy, Stack Overflow, YouTube, and official docs, and use
+          ChatGPT, Grok, and DeepSeek to enhance my skills through continuous
+          learning and practice.`}
+        </div>
+      </div>
+      {/* <Card>
         <CardBody
-          className=" max-w-[520px] lg:max-w-[640] text-white h-[215px]"
+          className=" max-w-[520px] lg:max-w-[640px] text-white h-[215px]"
           style={{ backgroundColor: "rgb(222, 112, 112)" }}
         >
           <div className="flex items-center justify-between font-bold text-lg tracking-widest">
@@ -161,7 +173,7 @@ export default function Top() {
             />
           </div>
         </CardBody>
-      </Card>
+      </Card> */}
     </div>
   );
 }

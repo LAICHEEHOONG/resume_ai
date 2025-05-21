@@ -6,7 +6,6 @@ import AccessDenied from "@/components/AccessDenied";
 import Top from "@/components/top/Top";
 import { Fade } from "react-awesome-reveal";
 
-
 export default function Home() {
   const lock = useSelector((state) => state.lock?.lock);
   return (
@@ -18,8 +17,10 @@ export default function Home() {
         </div>
       )}
       {!lock && (
-        <div className="flex justify-center mt-2">
-          <Top />
+        <div className="w-full flex justify-center" >
+          <div className=" min-h-screen bg-[url('/images/background_2.jpg')] bg-cover bg-center bg-no-repeat w-[900px]">
+            <Top />
+          </div>
         </div>
       )}
     </Fade>
