@@ -80,7 +80,7 @@
 //   );
 // }
 
-import { Image, Card, CardBody, Button, Divider } from "@heroui/react";
+import { Image, Card, CardBody, Button, Divider, Avatar } from "@heroui/react";
 import TranslateIcon from "@mui/icons-material/Translate";
 import { TypeAnimation } from "react-type-animation";
 import { useSelector, useDispatch } from "react-redux";
@@ -96,16 +96,19 @@ export default function Top() {
 
   return (
     <div className="flex gap-5 justify-between items-center bg-white rounded-lg shadow-lg p-4">
-      <Image
+      {/* <Image
         alt="laicheehoong_img"
         src="/images/laicheehoong.jpg"
-        width={225}
+        width={215}
         isBlurred
-        className="m-1"
-      />
+        radius="full"
+        className=""
+        
+      /> */}
+       <Avatar isBordered    src="/images/laicheehoong.jpg" className="w-52 h-52" />
       <Card>
         <CardBody
-          className="min-w-[600px] max-w-[640px] text-white h-[225px]"
+          className=" max-w-[520px] lg:max-w-[640] text-white h-[215px]"
           style={{ backgroundColor: "rgb(222, 112, 112)" }}
         >
           <div className="flex items-center justify-between font-bold text-lg tracking-widest">
@@ -118,6 +121,7 @@ export default function Top() {
                 cursor={false}
                 repeat={0}
               />
+              
             </div>
             <Button
               isIconOnly
@@ -125,11 +129,12 @@ export default function Top() {
               color="danger"
               radius="full"
               variant="flat"
+              size="sm"
               onPress={() => {
                 dispatch(setLanguage(language === "en" ? "zh" : "en"));
               }}
             >
-              <TranslateIcon className="text-white" />
+              <TranslateIcon className="text-white" fontSize="small" />
             </Button>
           </div>
           <div className="tracking-widest">
