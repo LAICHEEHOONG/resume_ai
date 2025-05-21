@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import AccessDenied from "@/components/AccessDenied";
 import Top from "@/components/top/Top";
 
+
 export default function Home() {
   const lock = useSelector((state) => state.lock?.lock);
   return (
