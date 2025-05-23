@@ -7,8 +7,8 @@ const initialState = {
     zh: "赖志宏",
   },
   title: {
-    en: "Web Developer",
-    zh: "网页开发者",
+    en: "Web Developer, Stock Keeper and Sales",
+    zh: "网络开发人员、库存管理员和销售人员",
   },
   description: {
     en: `I began web development in 2019 and enjoy building modern apps with Next.js, React, Redux, MongoDB, and Tailwind CSS. I'm skilled in creating RESTful APIs using Node.js, Express, and Mongoose. I learn from Udemy, Stack Overflow, YouTube, and official docs, and use ChatGPT, Grok, and DeepSeek to enhance my skills through continuous learning and practice.`,

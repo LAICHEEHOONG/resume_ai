@@ -102,20 +102,56 @@ export default function Top() {
           className="w-[10rem] h-[10rem] border-5 border-white"
         />
       </div>
-      <div className="flex flex-col justify-center">
-        <div className="text-2xl font-extrabold tracking-widest">
+      <div className="flex flex-col justify-center w-full">
+        {/* <div className="text-2xl font-extrabold tracking-widest">
           Lai Chee Hoong
+        </div> */}
+        <div className="flex justify-between items-center">
+          <div className="text-3xl font-extrabold tracking-widest">
+            {name}
+            {/* <TypeAnimation
+              key={`name-${language}`} // Add key to force remount on language change
+              sequence={[name]}
+              speed={55}
+              style={{ whiteSpace: "pre-wrap" }}
+              cursor={false}
+              repeat={0}
+            /> */}
+          </div>
+          <Button
+            isIconOnly
+            aria-label="lang"
+            color="danger"
+            radius="full"
+            variant="flat"
+            size="sm"
+            onPress={() => {
+              dispatch(setLanguage(language === "en" ? "zh" : "en"));
+            }}
+          >
+            <TranslateIcon className="text-white" fontSize="small" />
+          </Button>
         </div>
         <div className="text-default-400 tracking-widest">
-          Web Developer, Stock Keeper and Sales
+          {title}
+                     {/* <TypeAnimation
+                key={`title-${language}`} // Add key to force remount on language change
+                sequence={[title]}
+                speed={55}
+                style={{ whiteSpace: "pre-wrap" }}
+                cursor={false}
+                repeat={0}
+              /> */}
         </div>
         <div className="text-small mt-2">
-          {`I began web development in 2019 and enjoy building modern apps with
-          Next.js, React, Redux, MongoDB, and Tailwind CSS. I'm skilled in
-          creating RESTful APIs using Node.js, Express, and Mongoose. I learn
-          from Udemy, Stack Overflow, YouTube, and official docs, and use
-          ChatGPT, Grok, and DeepSeek to enhance my skills through continuous
-          learning and practice.`}
+            <TypeAnimation
+              key={`description-${language}`} // Add key to force remount on language change
+              sequence={[description]}
+              speed={105}
+              style={{ whiteSpace: "pre-wrap" }}
+              cursor={false}
+              repeat={0}
+            />
         </div>
       </div>
       {/* <Card>
