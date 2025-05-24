@@ -1,5 +1,14 @@
-import GitHubIcon from "@mui/icons-material/GitHub";
-import YouTubeIcon from "@mui/icons-material/YouTube";
+import { useState } from "react";
+import {
+  SiDotenv,
+  SiExpress,
+  SiMongoose,
+  SiMongodb,
+  SiNodedotjs,
+  SiHeroku,
+  SiReactrouter,
+} from "react-icons/si";
+
 import {
   IoLogoJavascript,
   IoLogoHtml5,
@@ -7,7 +16,7 @@ import {
   IoExtensionPuzzle,
   IoLogoFirebase,
 } from "react-icons/io5";
-import { FaBootstrap } from "react-icons/fa";
+import { FaBootstrap, FaReact } from "react-icons/fa";
 import {
   Modal,
   ModalContent,
@@ -16,122 +25,74 @@ import {
   ModalFooter,
   Button,
   useDisclosure,
-  Divider
+  Divider,
 } from "@heroui/react";
 import { Fade } from "react-awesome-reveal";
+import Case from "./Case";
 
 export default function Project() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [youtube, setYoutube] = useState("");
   return (
     <>
       <div className="flex flex-col m-5 w-full">
-        <div className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider">
+        <div className="text-xl mb-6 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider">
           PERSONAL PROJECT
         </div>
-        <div className="mt-6">
-          <div className="flex gap-2 items-center">
-            <div className="flex items-center gap-1">
-              <div className="tracking-wider">
-                Chrome Web Store - stockbal extension
-              </div>
-            </div>
-            <div className="text-sm text-default-400">(2020)</div>
-          </div>
 
-          <div className="flex gap-2">
-            <Button
-              isIconOnly
-              aria-label="lang"
-              color="danger"
-              radius="full"
-              variant="light"
-              size="sm"
-              onPress={onOpen}
-            >
-              <YouTubeIcon className="text-pink-500" fontSize="small" />
-            </Button>
-            <Button
-              isIconOnly
-              aria-label="lang"
-              color="secondary"
-              radius="full"
-              variant="light"
-              size="sm"
-              onPress={() =>
-                window.open(
-                  "https://github.com/LAICHEEHOONG/stockbal-extension",
-                  "_blank",
-                  "noopener,noreferrer"
-                )
-              }
-            >
-              <GitHubIcon className="text-purple-500" />
-            </Button>
-            <Divider className="h-5 mt-1.5 " orientation="vertical"/>
+        <Case
+          project="Stock Check"
+          youtube="C3RxGHKCDmk"
+          github="https://github.com/LAICHEEHOONG/stockcheck"
+          year="2022"
+          icon={[
+            { icon: FaBootstrap, color: "text-purple-600" }, // Bootstrap's primary color is a shade of purple
+            { icon: SiDotenv, color: "text-yellow-500" }, // .env files often associated with yellow in editors
+            { icon: SiExpress, color: "text-gray-800" }, // Express uses a dark/grayish theme in its branding
+            { icon: SiMongoose, color: "text-red-800" }, // Mongoose has a red logo
+            { icon: SiMongodb, color: "text-green-600" }, // MongoDB's logo is green
+            { icon: SiNodedotjs, color: "text-green-500" }, // Node.js has a green logo
+            { icon: FaReact, color: "text-cyan-500" }, // React's logo is a cyan/blue shade
+            { icon: SiHeroku, color: "text-purple-700" }, // Heroku's branding is purple
+            { icon: SiReactrouter, color: "text-red-500" }, // React Router uses a red logo
+          ]}
+          onOpen={onOpen}
+          setYoutube={setYoutube}
+        />
 
-            <Button
-              isIconOnly
-              aria-label="lb icon"
-              radius="full"
-              variant="light"
-              size="sm"
-              isDisabled
-            >
-              <FaBootstrap className="text-purple-400 w-5 h-5" />
-            </Button>
-            <Button
-              isIconOnly
-              aria-label="lb icon"
-              radius="full"
-              variant="light"
-              size="sm"
-              isDisabled
-            >
-              <IoLogoJavascript className="text-yellow-400 w-5 h-5" />
-            </Button>
-            <Button
-              isIconOnly
-              aria-label="lb icon"
-              radius="full"
-              variant="light"
-              size="sm"
-              isDisabled
-            >
-              <IoLogoFirebase className="text-yellow-400 w-5 h-5" />
-            </Button>
-            <Button
-              isIconOnly
-              aria-label="lb icon"
-              radius="full"
-              variant="light"
-              size="sm"
-              isDisabled
-            >
-              <IoExtensionPuzzle className="text-default-400 w-5 h-5" />
-            </Button>
+        <Case
+          project="Chrome Web Store - stockbal extension"
+          youtube="qAJlnqoeoqQ"
+          github="https://github.com/LAICHEEHOONG/stockbal-extension"
+          year="2021"
+          icon={[
+            { icon: FaBootstrap, color: "text-purple-600" },
+            { icon: IoLogoJavascript, color: "text-yellow-500" },
+            { icon: IoLogoFirebase, color: "text-yellow-500" },
+            { icon: IoExtensionPuzzle, color: "text-gray-500" },
+            { icon: IoLogoCss3, color: "text-blue-600" },
+            { icon: IoLogoHtml5, color: "text-red-600" },
+          ]}
+          onOpen={onOpen}
+          setYoutube={setYoutube}
+        />
 
-            <Button
-              isIconOnly
-              aria-label="lb icon"
-              radius="full"
-              variant="light"
-              size="sm"
-              isDisabled
-            >
-              <IoLogoCss3 className="text-blue-400 w-5 h-5" />
-            </Button>
-            <Button
-              isIconOnly
-              aria-label="lb icon"
-              radius="full"
-              variant="light"
-              size="sm"
-              isDisabled
-            >
-              <IoLogoHtml5 className="text-red-400 w-5 h-5" />
-            </Button>
-          </div>
-        </div>
+        <Case
+          project="Chrome Web Store - Dark Mode Touch"
+          youtube="PmB-bSHaBd8"
+          github="https://github.com/LAICHEEHOONG/dark_mode_touch"
+          year="2021"
+          icon={[
+            // { icon: FaBootstrap, color: "text-purple-400" },
+            { icon: IoLogoJavascript, color: "text-yellow-500" },
+            // { icon: IoLogoFirebase, color: "text-yellow-400" },
+            { icon: IoExtensionPuzzle, color: "text-gray-500" },
+            { icon: IoLogoCss3, color: "text-blue-600" },
+            { icon: IoLogoHtml5, color: "text-red-600" },
+          ]}
+          onOpen={onOpen}
+          setYoutube={setYoutube}
+        />
       </div>
 
       <Modal
@@ -150,7 +111,7 @@ export default function Project() {
                     <div className="relative overflow-hidden rounded-lg w-full aspect-video">
                       <iframe
                         className="absolute inset-0 w-full h-full rounded-lg"
-                        src={`https://www.youtube.com/embed/${"qAJlnqoeoqQ"}`}
+                        src={`https://www.youtube.com/embed/${youtube}`}
                         title="YouTube video"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
