@@ -7,8 +7,13 @@ import {
   SiNodedotjs,
   SiHeroku,
   SiReactrouter,
+  SiReactbootstrap,
+  SiBabel,
+  SiJsonwebtokens,
+  SiRedux,
+  SiMui,
 } from "react-icons/si";
-
+import { DiGoogleCloudPlatform } from "react-icons/di";
 import {
   IoLogoJavascript,
   IoLogoHtml5,
@@ -39,6 +44,50 @@ export default function Project() {
         <div className="text-xl mb-6 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider">
           PERSONAL PROJECT
         </div>
+        <Case
+          project="Resume of LAI CHEE HOONG"
+          youtube=""
+          web="https://laicheehoong.de.r.appspot.com/"
+          github="https://github.com/LAICHEEHOONG/resume"
+          year="2023"
+          icon={[
+            { icon: FaReact, color: "text-cyan-500" }, // React's logo is a cyan/blue shade
+            { icon: SiMui, color: "text-blue-500" }, // React Router uses a red logo
+            // { icon: SiReactbootstrap, color: "text-blue-600" }, // Bootstrap's primary color is a shade of purple
+            { icon: SiDotenv, color: "text-yellow-500" }, // .env files often associated with yellow in editors
+            { icon: SiExpress, color: "text-gray-800" }, // Express uses a dark/grayish theme in its branding
+            { icon: SiMongoose, color: "text-red-800" }, // Mongoose has a red logo
+            { icon: SiMongodb, color: "text-green-600" }, // MongoDB's logo is green
+            { icon: SiNodedotjs, color: "text-green-500" }, // Node.js has a green logo
+            { icon: DiGoogleCloudPlatform, color: "text-default-700" }, // Heroku's branding is purple
+            { icon: SiReactrouter, color: "text-red-500" }, // React Router uses a red logo
+            // { icon: SiBabel, color: "text-yellow-500" }, // React Router uses a red logo
+            // { icon: SiJsonwebtokens, color: "text-gray-500" }, // React Router uses a red logo
+            { icon: SiRedux, color: "text-purple-500" }, // React Router uses a red logo
+          ]}
+          onOpen={onOpen}
+          setYoutube={setYoutube}
+        />
+        <Case
+          project="Order & Count"
+          youtube="r5eSVkyPxC4"
+          github="https://github.com/LAICHEEHOONG/order-count"
+          year="2022"
+          icon={[
+            { icon: FaReact, color: "text-cyan-500" }, // React's logo is a cyan/blue shade
+            { icon: SiReactbootstrap, color: "text-blue-600" }, // Bootstrap's primary color is a shade of purple
+            { icon: SiDotenv, color: "text-yellow-500" }, // .env files often associated with yellow in editors
+            { icon: SiExpress, color: "text-gray-800" }, // Express uses a dark/grayish theme in its branding
+            { icon: SiMongoose, color: "text-red-800" }, // Mongoose has a red logo
+            { icon: SiMongodb, color: "text-green-600" }, // MongoDB's logo is green
+            { icon: SiNodedotjs, color: "text-green-500" }, // Node.js has a green logo
+            { icon: SiHeroku, color: "text-purple-700" }, // Heroku's branding is purple
+            { icon: SiReactrouter, color: "text-red-500" }, // React Router uses a red logo
+            { icon: SiJsonwebtokens, color: "text-gray-500" }, // React Router uses a red logo
+          ]}
+          onOpen={onOpen}
+          setYoutube={setYoutube}
+        />
 
         <Case
           project="Stock Check"
@@ -46,15 +95,30 @@ export default function Project() {
           github="https://github.com/LAICHEEHOONG/stockcheck"
           year="2022"
           icon={[
+            { icon: FaReact, color: "text-cyan-500" }, // React's logo is a cyan/blue shade
             { icon: FaBootstrap, color: "text-purple-600" }, // Bootstrap's primary color is a shade of purple
             { icon: SiDotenv, color: "text-yellow-500" }, // .env files often associated with yellow in editors
             { icon: SiExpress, color: "text-gray-800" }, // Express uses a dark/grayish theme in its branding
             { icon: SiMongoose, color: "text-red-800" }, // Mongoose has a red logo
             { icon: SiMongodb, color: "text-green-600" }, // MongoDB's logo is green
             { icon: SiNodedotjs, color: "text-green-500" }, // Node.js has a green logo
-            { icon: FaReact, color: "text-cyan-500" }, // React's logo is a cyan/blue shade
             { icon: SiHeroku, color: "text-purple-700" }, // Heroku's branding is purple
             { icon: SiReactrouter, color: "text-red-500" }, // React Router uses a red logo
+            { icon: SiJsonwebtokens, color: "text-gray-500" }, // React Router uses a red logo
+          ]}
+          onOpen={onOpen}
+          setYoutube={setYoutube}
+        />
+
+        <Case
+          project="Gym-Timer"
+          youtube="g3qXyXLyElc"
+          github="https://laicheehoong.github.io/gym-timer/"
+          year="2021"
+          icon={[
+            // { icon: FaBootstrap, color: "text-purple-600" }, // Bootstrap's primary color is a shade of purple
+            { icon: FaReact, color: "text-cyan-500" }, // React's logo is a cyan/blue shade
+            { icon: SiReactbootstrap, color: "text-blue-600" },
           ]}
           onOpen={onOpen}
           setYoutube={setYoutube}
@@ -66,12 +130,13 @@ export default function Project() {
           github="https://github.com/LAICHEEHOONG/stockbal-extension"
           year="2021"
           icon={[
-            { icon: FaBootstrap, color: "text-purple-600" },
             { icon: IoLogoJavascript, color: "text-yellow-500" },
-            { icon: IoLogoFirebase, color: "text-yellow-500" },
-            { icon: IoExtensionPuzzle, color: "text-gray-500" },
             { icon: IoLogoCss3, color: "text-blue-600" },
             { icon: IoLogoHtml5, color: "text-red-600" },
+
+            { icon: IoExtensionPuzzle, color: "text-gray-500" },
+            { icon: IoLogoFirebase, color: "text-yellow-500" },
+            { icon: FaBootstrap, color: "text-purple-600" },
           ]}
           onOpen={onOpen}
           setYoutube={setYoutube}
@@ -86,7 +151,51 @@ export default function Project() {
             // { icon: FaBootstrap, color: "text-purple-400" },
             { icon: IoLogoJavascript, color: "text-yellow-500" },
             // { icon: IoLogoFirebase, color: "text-yellow-400" },
+
+            { icon: IoLogoCss3, color: "text-blue-600" },
+            { icon: IoLogoHtml5, color: "text-red-600" },
             { icon: IoExtensionPuzzle, color: "text-gray-500" },
+          ]}
+          onOpen={onOpen}
+          setYoutube={setYoutube}
+        />
+        <Case
+          project="Simon Game"
+          youtube="d7cEbPMDPj4"
+          github="https://github.com/LAICHEEHOONG/simon"
+          year="2020"
+          icon={[
+            // { icon: FaBootstrap, color: "text-purple-400" },
+            { icon: IoLogoJavascript, color: "text-yellow-500" },
+            // { icon: IoLogoFirebase, color: "text-yellow-400" },
+            { icon: IoLogoCss3, color: "text-blue-600" },
+            { icon: IoLogoHtml5, color: "text-red-600" },
+          ]}
+          onOpen={onOpen}
+          setYoutube={setYoutube}
+        />
+        <Case
+          project="Budgety"
+          // youtube="d7cEbPMDPj4"
+          github="https://github.com/LAICHEEHOONG/budgety"
+          web="https://laicheehoong.github.io/budgety/"
+          year="2019"
+          icon={[
+            { icon: IoLogoJavascript, color: "text-yellow-500" },
+            { icon: IoLogoCss3, color: "text-blue-600" },
+            { icon: IoLogoHtml5, color: "text-red-600" },
+          ]}
+          onOpen={onOpen}
+          setYoutube={setYoutube}
+        />
+              <Case
+          project="Omnifood"
+          // youtube="d7cEbPMDPj4"
+          github="https://github.com/LAICHEEHOONG/omnifood"
+          web="https://laicheehoong.github.io/omnifood/"
+          year="2019"
+          icon={[
+            // { icon: IoLogoJavascript, color: "text-yellow-500" },
             { icon: IoLogoCss3, color: "text-blue-600" },
             { icon: IoLogoHtml5, color: "text-red-600" },
           ]}

@@ -1,8 +1,7 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-
+import LanguageIcon from '@mui/icons-material/Language';
 import { LuDot } from "react-icons/lu";
-
 import { Button } from "@heroui/react";
 
 export default function Case({
@@ -11,7 +10,7 @@ export default function Case({
   github,
   year,
   icon,
-
+  web,
   onOpen,
   setYoutube,
 }) {
@@ -25,7 +24,38 @@ export default function Case({
       </div>
 
       <div className="flex gap-2">
-        <Button
+        {web && (
+          <Button
+            isIconOnly
+            aria-label="web"
+            color="primary"
+            radius="full"
+            variant="light"
+            size="sm"
+            onPress={() => window.open(web, "_blank", "noopener,noreferrer")}
+          >
+            <LanguageIcon className="text-blue-500"  />
+          </Button>
+        )}
+
+        {youtube && (
+          <Button
+            isIconOnly
+            aria-label="youtube"
+            color="primary"
+            radius="full"
+            variant="light"
+            size="sm"
+            onPress={() => {
+              setYoutube(youtube);
+              onOpen();
+            }}
+          >
+            <YouTubeIcon className="text-pink-500" />
+          </Button>
+        )}
+
+        {/* <Button
           isIconOnly
           aria-label="lang"
           color="danger"
@@ -38,7 +68,7 @@ export default function Case({
           }}
         >
           <YouTubeIcon className="text-pink-500" fontSize="small" />
-        </Button>
+        </Button> */}
         <Button
           isIconOnly
           aria-label="lang"
