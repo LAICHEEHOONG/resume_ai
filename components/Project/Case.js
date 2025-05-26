@@ -23,7 +23,7 @@ export default function Case({
         <div className="text-sm text-default-400">{`(${year})`}</div>
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex gap-1">
         {web && (
           <Button
             isIconOnly
