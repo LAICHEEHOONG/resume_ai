@@ -14,7 +14,13 @@ import {
   SiRedux,
   SiCloudinary,
   SiMui,
-  SiShadcnui
+  SiShadcnui,
+  SiVercel,
+  SiNamecheap,
+  SiOpenai,
+  SiGoogleanalytics,
+  SiGooglemaps,
+  SiLodash,
 } from "react-icons/si";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { BsStripe } from "react-icons/bs";
@@ -52,33 +58,80 @@ export default function Project() {
           PERSONAL PROJECT
         </div>
         <Case
+          project="StockbalX"
+          youtube="I6ZF1SkczMU"
+          // web="https://www.allcareok.com/"
+          github="https://github.com/LAICHEEHOONG/stockbalx"
+          year="2025"
+          icon={[
+            { icon: RiNextjsLine, color: "text-black" },
+            { icon: SiNextui, color: "text-black" },
+            { icon: SiMui, color: "text-blue-500" },
+            // { icon: SiShadcnui, color: "text-black" },
+            // { icon: FcGoogle, color: "" },
+            // { icon: BsStripe, color: "text-purple-500" },
+            // { icon: SiCloudinary, color: "text-blue-500" },
+            { icon: RiTailwindCssFill, color: "text-blue-500" },
+            { icon: SiMongoose, color: "text-red-800" },
+            { icon: SiMongodb, color: "text-green-600" },
+            // { icon: SiNamecheap, color: "text-orange-600" },
+            { icon: SiVercel, color: "text-black-600" },
+            { icon: SiRedux, color: "text-purple-500" },
+            { icon: IoExtensionPuzzle, color: "text-gray-500" },
+            { icon: SiLodash, color: "text-black" },
+
+            // { icon: SiOpenai, color: "text-green-500" },
+          ]}
+          onOpen={onOpen}
+          setYoutube={setYoutube}
+        />
+        <Case
+          project="AI Custom PC Builder"
+          youtube="u3ZgrKbT5EM"
+          // web="https://www.allcareok.com/"
+          github="https://github.com/LAICHEEHOONG/learn_ai"
+          year="2025"
+          icon={[
+            { icon: RiNextjsLine, color: "text-black" },
+            { icon: SiNextui, color: "text-black" },
+            { icon: SiMui, color: "text-blue-500" },
+            // { icon: SiShadcnui, color: "text-black" },
+            // { icon: FcGoogle, color: "" },
+            // { icon: BsStripe, color: "text-purple-500" },
+            // { icon: SiCloudinary, color: "text-blue-500" },
+            { icon: RiTailwindCssFill, color: "text-blue-500" },
+            { icon: SiMongoose, color: "text-red-800" },
+            { icon: SiMongodb, color: "text-green-600" },
+            // { icon: SiNamecheap, color: "text-orange-600" },
+            { icon: SiVercel, color: "text-black-600" },
+            { icon: SiRedux, color: "text-purple-500" },
+            { icon: SiOpenai, color: "text-green-500" },
+          ]}
+          onOpen={onOpen}
+          setYoutube={setYoutube}
+        />
+        <Case
           project="Allcareok.com"
-          youtube="-13aqt9Vh5c"
-          // web="https://laicheehoong.github.io/compress_image/"
+          // youtube="-13aqt9Vh5c"
+          web="https://www.allcareok.com/"
           github="https://github.com/LAICHEEHOONG/allcareok"
           year="2024"
           icon={[
-            { icon: RiNextjsLine, color: "text-black" }, // React's logo is a cyan/blue shade
+            { icon: RiNextjsLine, color: "text-black" },
             { icon: SiNextui, color: "text-black" },
-            { icon: SiMui, color: "text-blue-500" }, // React Router uses a red logo
-               { icon: SiShadcnui, color: "text-black" },
-            { icon: FcGoogle, color: "" }, // React Router uses a red logo
+            { icon: SiMui, color: "text-blue-500" },
+            { icon: SiShadcnui, color: "text-black" },
+            // { icon: FcGoogle, color: "" },
             { icon: BsStripe, color: "text-purple-500" },
-            { icon: SiCloudinary, color: "text-blue-500" }, // React Router uses a red logo
+            { icon: SiCloudinary, color: "text-blue-500" },
             { icon: RiTailwindCssFill, color: "text-blue-500" },
-             { icon: SiMongoose, color: "text-red-800" }, // Mongoose has a red logo
-            { icon: SiMongodb, color: "text-green-600" }, // MongoDB's logo is green
-            // { icon: SiReactbootstrap, color: "text-blue-600" }, // Bootstrap's primary color is a shade of purple
-            // { icon: SiDotenv, color: "text-yellow-500" }, // .env files often associated with yellow in editors
-            // { icon: SiExpress, color: "text-gray-800" }, // Express uses a dark/grayish theme in its branding
-            // { icon: SiMongoose, color: "text-red-800" }, // Mongoose has a red logo
-            // { icon: SiMongodb, color: "text-green-600" }, // MongoDB's logo is green
-            // { icon: SiNodedotjs, color: "text-green-500" }, // Node.js has a green logo
-            // { icon: DiGoogleCloudPlatform, color: "text-default-700" }, // Heroku's branding is purple
-            // { icon: SiReactrouter, color: "text-red-500" }, // React Router uses a red logo
-            // { icon: SiBabel, color: "text-yellow-500" }, // React Router uses a red logo
-            // { icon: SiJsonwebtokens, color: "text-gray-500" }, // React Router uses a red logo
-            { icon: SiRedux, color: "text-purple-500" }, // React Router uses a red logo
+            // { icon: SiMongoose, color: "text-red-800" },
+            { icon: SiMongodb, color: "text-green-600" },
+            { icon: SiNamecheap, color: "text-orange-600" },
+            { icon: SiVercel, color: "text-black-600" },
+            { icon: SiRedux, color: "text-purple-500" },
+            { icon: SiGooglemaps, color: "text-red-600" },
+            { icon: SiGoogleanalytics, color: "text-orange-500" },
           ]}
           onOpen={onOpen}
           setYoutube={setYoutube}
@@ -155,7 +208,7 @@ export default function Project() {
           onOpen={onOpen}
           setYoutube={setYoutube}
         />
-        <Case
+        {/* <Case
           project="Compress Image APP"
           youtube="-DTgM3O2ItY"
           // web="https://laicheehoong.github.io/compress_image/"
@@ -178,7 +231,7 @@ export default function Project() {
           ]}
           onOpen={onOpen}
           setYoutube={setYoutube}
-        />
+        /> */}
         <Case
           project="Resume of LAI CHEE HOONG"
           youtube=""
