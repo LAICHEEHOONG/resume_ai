@@ -53,8 +53,8 @@ export default function Project() {
   const [youtube, setYoutube] = useState("");
   return (
     <>
-      <div className="flex flex-col m-5 w-full">
-        <div className="text-xl mb-6 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider">
+      <div className="flex flex-col w-full max-w-[470px] p-1">
+        <div className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider">
           PERSONAL PROJECT
         </div>
         <Case
