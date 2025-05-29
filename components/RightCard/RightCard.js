@@ -8,7 +8,13 @@ export default function RightCard() {
           COURSES & TRAININGS
         </div>
       </div>
-      <Course course={"Intro to MySQL With Node.js - Learn To Use MySQL with Node!"} year={"2023"} />
+      <div className="flex flex-col gap-1 my-2  backdrop-blur-md rounded-2xl p-2 shadow-lg border border-white/20 ">
+        <Course course="Intro to MySQL With Node.js - Learn To Use MySQL with Node!" year="2023" />  
+        <Course course="The Beginning with GIT & Github course" year="2023" />
+        <Course course="The complete React 18 Fullstack course" year="2022" />
+        <Course course="The Complete Web Development Bootcamp" year="2020" />
+      </div>  
+  
 
       {/* <Modal
         isOpen={isOpen}
