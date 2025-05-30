@@ -1,22 +1,71 @@
 import Course from "../Course/Course";
+import {
+  Modal,
+  ModalContent,
+  ModalBody,
+  useDisclosure,
+  Image,
+} from "@heroui/react";
+import { Fade } from "react-awesome-reveal";
+import { useState } from "react";
 
 export default function RightCard() {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [certificate, setCertificate] = useState("");
   return (
     <div className="flex flex-col w-full">
-      <div className="flex flex-col p-1">
-        <div className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider">
+      <div className="flex flex-col p-3">
+        <div className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider ">
           COURSES & TRAININGS
         </div>
       </div>
-      <div className="flex flex-col gap-1 my-2  backdrop-blur-md rounded-2xl p-2 shadow-lg border border-white/20 ">
-        <Course course="Intro to MySQL With Node.js - Learn To Use MySQL with Node!" year="2023" />  
-        <Course course="The Beginning with GIT & Github course" year="2023" />
-        <Course course="The complete React 18 Fullstack course" year="2022" />
-        <Course course="The Complete Web Development Bootcamp" year="2020" />
-      </div>  
-  
+      <div className="flex flex-col gap-1 m-2 -mt-0.5 backdrop-blur-md rounded-2xl  shadow-lg border border-white/20 ">
+        <Course
+          course="The Server Side with NEXT.JS"
+          year="2025"
+          certificate={"/images/next.jpg"}
+          setCertificate={setCertificate}
+          onOpen={onOpen}
+        />
 
-      {/* <Modal
+        <Course
+          course="The Beginning with GIT & Github course"
+          year="2023"
+          certificate={"/images/githubCer.jpg"}
+          setCertificate={setCertificate}
+          onOpen={onOpen}
+        />
+        <Course
+          course="The complete React 18 Fullstack course"
+          year="2022"
+          certificate={"/images/reactCer.jpg"}
+          setCertificate={setCertificate}
+          onOpen={onOpen}
+        />
+        <Course
+          course="The Complete Web Development Bootcamp"
+          year="2020"
+          certificate={"/images/bootcamp.jpg"}
+          setCertificate={setCertificate}
+          onOpen={onOpen}
+        />
+        <Course
+          course="JavaScript Course: From Zero to Expert!"
+          year="2020"
+          certificate={"/images/javascript.jpg"}
+          setCertificate={setCertificate}
+          onOpen={onOpen}
+        />
+        <Course
+          course="Responsive Website with HTML and CSS"
+          year="2019"
+          certificate={"/images/html_css.jpg"}
+          setCertificate={setCertificate}
+          onOpen={onOpen}
+        />
+      </div>
+
+      <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         backdrop="blur"
@@ -27,25 +76,14 @@ export default function RightCard() {
           {(onClose) => (
             <>
               <ModalBody>
-                <Fade className="flex flex-col  space-y-4 py-4">
-                  <div className="w-full max-w-[1200px]">
-                    <div className="relative overflow-hidden rounded-lg w-full aspect-video">
-                      <iframe
-                        className="absolute inset-0 w-full h-full rounded-lg"
-                        src={`https://www.youtube.com/embed/${youtube}`}
-                        title="YouTube video"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                  </div>
+                <Fade className="">
+                  <Image alt="Certificate" src={certificate} width={1200} />
                 </Fade>
               </ModalBody>
             </>
           )}
         </ModalContent>
-      </Modal> */}
+      </Modal>
     </div>
   );
 }

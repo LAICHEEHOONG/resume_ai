@@ -25,7 +25,6 @@ import {
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { BsStripe } from "react-icons/bs";
 import { DiGoogleCloudPlatform } from "react-icons/di";
-import { FcGoogle } from "react-icons/fc";
 import {
   IoLogoJavascript,
   IoLogoHtml5,
@@ -34,16 +33,11 @@ import {
   IoLogoFirebase,
 } from "react-icons/io5";
 import { FaBootstrap, FaReact } from "react-icons/fa";
-import { RiNextjsFill } from "react-icons/ri";
 import {
   Modal,
   ModalContent,
-  ModalHeader,
   ModalBody,
-  ModalFooter,
-  Button,
   useDisclosure,
-  Divider,
 } from "@heroui/react";
 import { Fade } from "react-awesome-reveal";
 import Case from "./Case";
@@ -53,7 +47,7 @@ export default function Project() {
   const [youtube, setYoutube] = useState("");
   return (
     <>
-      <div className="flex flex-col w-full max-w-[470px] p-1">
+      <div className="flex flex-col max-w-[400px] py-3 px-1">
         <div className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider">
           PERSONAL PROJECT
         </div>
@@ -86,7 +80,7 @@ export default function Project() {
           setYoutube={setYoutube}
         />
         <Case
-          project="AI Custom PC Builder"
+          project="AI PC Builder"
           youtube="u3ZgrKbT5EM"
           // web="https://www.allcareok.com/"
           github="https://github.com/LAICHEEHOONG/learn_ai"
@@ -233,7 +227,7 @@ export default function Project() {
           setYoutube={setYoutube}
         /> */}
         <Case
-          project="Resume of LAI CHEE HOONG"
+          project="Resume"
           youtube=""
           web="https://laicheehoong.de.r.appspot.com/"
           github="https://github.com/LAICHEEHOONG/resume"
@@ -313,7 +307,7 @@ export default function Project() {
         />
 
         <Case
-          project="Chrome Web Store - stockbal extension"
+          project="stockbal extension"
           youtube="qAJlnqoeoqQ"
           github="https://github.com/LAICHEEHOONG/stockbal-extension"
           year="2021"
@@ -331,7 +325,7 @@ export default function Project() {
         />
 
         <Case
-          project="Chrome Web Store - Dark Mode Touch"
+          project="Dark Mode Touch"
           youtube="PmB-bSHaBd8"
           github="https://github.com/LAICHEEHOONG/dark_mode_touch"
           year="2021"

@@ -15,13 +15,13 @@ export default function Case({
   setYoutube,
 }) {
   return (
-    <div className="flex flex-col gap-1 my-2 w-[460px] backdrop-blur-md rounded-2xl p-2 shadow-lg border border-white/20">
+    <div className="flex flex-col gap-1 my-2 w-[340px] backdrop-blur-md rounded-2xl p-2 shadow-lg border border-white/20">
       <div className="flex items-center justify-between">
         <div className="flex gap-2 items-center">
           <div className="flex items-center gap-1">
-            <div className="tracking-wider">{project}</div>
+            <div className="tracking-wider uppercase font-semibold">{project}</div>
           </div>
-          <div className="text-sm text-default-400">{`(${year})`}</div>
+          <div className="text-xs text-default-400">{`(${year})`}</div>
         </div>
         <div className="flex items-center gap-2">
           {web && (
