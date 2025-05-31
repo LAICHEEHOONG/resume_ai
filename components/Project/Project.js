@@ -33,12 +33,7 @@ import {
   IoLogoFirebase,
 } from "react-icons/io5";
 import { FaBootstrap, FaReact } from "react-icons/fa";
-import {
-  Modal,
-  ModalContent,
-  ModalBody,
-  useDisclosure,
-} from "@heroui/react";
+import { Modal, ModalContent, ModalBody, useDisclosure } from "@heroui/react";
 import { Fade } from "react-awesome-reveal";
 import Case from "./Case";
 
@@ -294,6 +289,7 @@ export default function Project() {
 
         <Case
           project="Gym-Timer"
+          web="https://laicheehoong.github.io/gym-timer/"
           youtube="g3qXyXLyElc"
           github="https://laicheehoong.github.io/gym-timer/"
           year="2021"
@@ -343,6 +339,7 @@ export default function Project() {
         />
         <Case
           project="Simon Game"
+          web="https://laicheehoong.github.io/simon/"
           youtube="d7cEbPMDPj4"
           github="https://github.com/LAICHEEHOONG/simon"
           year="2020"
