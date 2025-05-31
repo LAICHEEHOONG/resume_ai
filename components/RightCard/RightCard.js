@@ -8,6 +8,7 @@ import {
 } from "@heroui/react";
 import { Fade } from "react-awesome-reveal";
 import { useState } from "react";
+import Education from "../Education/Education";
 
 export default function RightCard() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -64,6 +65,7 @@ export default function RightCard() {
           onOpen={onOpen}
         />
       </div>
+      <Education />
 
       <Modal
         isOpen={isOpen}
