@@ -46,6 +46,7 @@ import {
   SiGoogleanalytics,
   SiGooglemaps,
   SiLodash,
+  SiNodemon,
 } from "react-icons/si";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { BsStripe } from "react-icons/bs";
@@ -57,7 +58,8 @@ import {
   IoExtensionPuzzle,
   IoLogoFirebase,
 } from "react-icons/io5";
-import { FaBootstrap, FaReact } from "react-icons/fa";
+import { FaBootstrap, FaReact, FaGoogle } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 export default function LeftCard() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -133,6 +135,7 @@ export default function LeftCard() {
               color: "text-black",
               name: "Lodash",
             },
+            { name: "React Icons", image: "/images/icon.png" },
           ]}
           setIcon={setIcon}
           onOpen={onOpen}
@@ -160,6 +163,7 @@ export default function LeftCard() {
             { icon: SiVercel, color: "text-black-600", name: "Vercel" },
             { icon: SiRedux, color: "text-purple-500", name: "Redux" },
             { icon: SiOpenai, color: "text-green-500", name: "OpenAI" },
+            { name: "Embla Carousel", image: "/images/embla.jpeg" },
           ]}
           setIcon={setIcon}
           onOpen={onOpen}
@@ -191,11 +195,17 @@ export default function LeftCard() {
             { icon: SiCloudinary, color: "text-blue-500", name: "Cloudinary" },
             { icon: SiNamecheap, color: "text-orange-600", name: "Namecheap" },
             { icon: SiGooglemaps, color: "text-red-600", name: "Google Maps" },
+            { icon: SiShadcnui, color: "text-black", name: "Shadcn UI" },
             {
               icon: SiGoogleanalytics,
               color: "text-orange-500",
               name: "Google Analytics",
             },
+            { name: "Embla Carousel", image: "/images/embla.jpeg" },
+            { name: "React Dropzone", image: "/images/drop.png" },
+            { name: "React Icons", image: "/images/icon.png" },
+            { name: "Next Auth", image: "/images/auth.png" },
+            { icon: FcGoogle, color: "", name: "Google OAuth" },
           ]}
           setIcon={setIcon}
           onOpen={onOpen}
@@ -296,6 +306,7 @@ export default function LeftCard() {
               name: "React Router",
             },
             { icon: SiRedux, color: "text-purple-500", name: "Redux" },
+            { icon: SiNodemon, color: "text-green-500", name: "Nodemon" },
           ]}
           setIcon={setIcon}
           onOpen={onOpen}
@@ -332,6 +343,10 @@ export default function LeftCard() {
               color: "text-gray-500",
               name: "JSON Web Tokens",
             },
+            {
+              image: "/images/bcrypt.jpeg",
+              name: "bcrypt",
+            },
           ]}
           setIcon={setIcon}
           onOpen={onOpen}
@@ -364,6 +379,15 @@ export default function LeftCard() {
               color: "text-gray-500",
               name: "JSON Web Tokens",
             },
+                  {
+              image: "/images/formik.png",
+              name: "Formik",
+            },
+            {
+              image: "/images/bcrypt.jpeg",
+              name: "bcrypt",
+            },
+      
           ]}
           setIcon={setIcon}
           onOpen={onOpen}
@@ -376,7 +400,7 @@ export default function LeftCard() {
           project="Gym-Timer"
           web="https://laicheehoong.github.io/gym-timer/"
           youtube="g3qXyXLyElc"
-          github="https://laicheehoong.github.io/gym-timer/"
+          github="https://github.com/LAICHEEHOONG/gym-timer"
           year="2021"
           icon={[
             { icon: FaReact, color: "text-cyan-500", name: "React" },
@@ -427,7 +451,11 @@ export default function LeftCard() {
           github="https://github.com/LAICHEEHOONG/dark_mode_touch"
           year="2021"
           icon={[
-            { icon: IoLogoJavascript, color: "text-yellow-500", name: "JavaScript" },
+            {
+              icon: IoLogoJavascript,
+              color: "text-yellow-500",
+              name: "JavaScript",
+            },
             { icon: IoLogoCss3, color: "text-blue-600", name: "CSS3" },
             { icon: IoLogoHtml5, color: "text-red-600", name: "HTML5" },
             { icon: IoExtensionPuzzle, color: "text-gray-500", name: "Puzzle" },
@@ -446,7 +474,11 @@ export default function LeftCard() {
           github="https://github.com/LAICHEEHOONG/simon"
           year="2020"
           icon={[
-            { icon: IoLogoJavascript, color: "text-yellow-500", name: "JavaScript" },
+            {
+              icon: IoLogoJavascript,
+              color: "text-yellow-500",
+              name: "JavaScript",
+            },
             { icon: IoLogoCss3, color: "text-blue-600", name: "CSS3" },
             { icon: IoLogoHtml5, color: "text-red-600", name: "HTML5" },
           ]}
@@ -463,7 +495,11 @@ export default function LeftCard() {
           web="https://laicheehoong.github.io/budgety/"
           year="2019"
           icon={[
-            { icon: IoLogoJavascript, color: "text-yellow-500", name: "JavaScript" },
+            {
+              icon: IoLogoJavascript,
+              color: "text-yellow-500",
+              name: "JavaScript",
+            },
             { icon: IoLogoCss3, color: "text-blue-600", name: "CSS3" },
             { icon: IoLogoHtml5, color: "text-red-600", name: "HTML5" },
           ]}
@@ -547,7 +583,18 @@ export default function LeftCard() {
                                 {item.name}
                               </div>
                             </div>
-                            <item.icon className={`w-10 h-10 ${item.color}`} />
+                            {item.icon ? (
+                              <item.icon
+                                className={`w-10 h-10 ${item.color}`}
+                              />
+                            ) : (
+                              <Image
+                                alt="HeroUI hero Image"
+                                src={item.image}
+                                width={40}
+                              />
+                            )}
+                            {/* <item.icon className={`w-10 h-10 ${item.color}`} /> */}
                           </div>
                         </CardBody>
                       </Card>
