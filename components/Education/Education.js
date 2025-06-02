@@ -11,22 +11,28 @@ import { Fade, Bounce } from "react-awesome-reveal";
 import { useState } from "react";
 import { PiCertificateFill } from "react-icons/pi";
 import LanguageIcon from "@mui/icons-material/Language";
+import { useSelector } from "react-redux";
 
 export default function Education() {
+  const lang = useSelector((state) => state.language?.language);
+  const cardTitle = useSelector(
+    (state) => state.language?.cardTitle
+  );
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [certificate, setCertificate] = useState("");
   return (
     <div className="flex flex-col w-full">
       <div className="flex flex-col p-3">
         <div className="text-xl uppercase font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider ">
-          Education
+          {cardTitle.education[lang]}
         </div>
       </div>
       <div className="flex flex-col gap-1 m-2 -mt-0.5 backdrop-blur-md rounded-2xl  shadow-lg border border-white/20 ">
         <div className="flex flex-col gap-1 p-2 ">
           <div className="flex gap-4 items-center">
             <div className="tracking-widest uppercase py-1 font-semibold ">
-              National Central University
+              {cardTitle.nationalCentralUniversity[lang]}
+              {/* National Central University */}
             </div>
             <Bounce>
               <Button
@@ -49,7 +55,10 @@ export default function Education() {
 
           <div>
             <div className="flex gap-4 items-center">
-              <div className="text-default-400 text-sm tracking-widest ">{`Department of Electrical Engineering`}</div>
+              <div className="text-default-400 text-sm tracking-widest ">{
+              // `Department of Electrical Engineering`
+                cardTitle.departmentOfElectricalEngineering[lang]
+              }</div>
               <Bounce>
                 <Button
                   isIconOnly
@@ -66,15 +75,23 @@ export default function Education() {
                 </Button>
               </Bounce>
             </div>
-            <div className="text-default-400 text-sm tracking-widest h-[34px] flex items-center">{`Taiwan Taoyuan City`}</div>
+            <div className="text-default-400 text-sm tracking-widest h-[34px] flex items-center">
+              {
+              // `Taiwan Taoyuan City`
+                cardTitle.taiwanTaoyuanCity[lang]
+              }</div>
             <div className="text-default-400 text-sm tracking-widest h-[34px] flex items-center">{`2010 - 2011`}</div>
-            <div className="text-default-400 text-sm tracking-widest h-[34px] flex items-center">{`(I didn’t complete the program)`}</div>
+            <div className="text-default-400 text-sm tracking-widest h-[34px] flex items-center">{
+            // `(I didn’t complete the program)`
+              cardTitle.iDidntCompletetheProgram[lang]
+            }</div>
           </div>
         </div>
         <div className="flex flex-col gap-1 p-2 ">
           <div className="flex gap-4 items-center">
             <div className="tracking-widest uppercase py-1 font-semibold ">
-              Yuk Choy High School
+              {/* Yuk Choy High School */}
+              {cardTitle.yukChoyHighSchool[lang]}
             </div>
             <Bounce>
               <Button
@@ -97,7 +114,10 @@ export default function Education() {
 
           <div>
             <div className="flex gap-4 items-center ">
-              <div className="text-default-400 text-sm tracking-widest">{`Science Class`}</div>
+              <div className="text-default-400 text-sm tracking-widest">{
+              // `Science Class`
+                cardTitle.scienceClass[lang]
+              }</div>
               <Bounce>
                 <Button
                   isIconOnly
@@ -129,7 +149,10 @@ export default function Education() {
                 </Button>
               </Bounce>
             </div>
-            <div className="text-default-400 text-sm tracking-widest h-[34px] flex items-center">{`Malaysia Ipoh`}</div>
+            <div className="text-default-400 text-sm tracking-widest h-[34px] flex items-center">{
+            // `Malaysia Ipoh`
+              cardTitle.malaysiaIpoh[lang]
+            }</div>
             <div className="text-default-400 text-sm tracking-widest h-[34px] flex items-center">{`2004 - 2009`}</div>
             {/* <div className="text-default-400 text-sm tracking-widest">{`(I didn’t complete the program)`}</div> */}
           </div>

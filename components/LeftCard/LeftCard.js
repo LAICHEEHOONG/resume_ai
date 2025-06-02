@@ -1,4 +1,4 @@
-import Course from "../Course/Course";
+// import Course from "../Course/Course";
 import {
   Modal,
   ModalContent,
@@ -12,16 +12,10 @@ import {
   DrawerFooter,
   Button,
   Card,
-  CardHeader,
   CardBody,
-  CardFooter,
-  Divider,
-  Link,
-  link,
 } from "@heroui/react";
 import { Fade } from "react-awesome-reveal";
-import { useState } from "react";
-import Education from "../Education/Education";
+import { use, useState } from "react";
 import PersonalProject from "./PersonalProject";
 
 import {
@@ -34,7 +28,6 @@ import {
   SiHeroku,
   SiReactrouter,
   SiReactbootstrap,
-  SiBabel,
   SiJsonwebtokens,
   SiRedux,
   SiCloudinary,
@@ -58,10 +51,18 @@ import {
   IoExtensionPuzzle,
   IoLogoFirebase,
 } from "react-icons/io5";
-import { FaBootstrap, FaReact, FaGoogle } from "react-icons/fa";
+import { FaBootstrap, FaReact } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { useSelector } from "react-redux";
 
 export default function LeftCard() {
+  const lang = useSelector((state) => state.language?.language);
+  const personalProject = useSelector(
+    (state) => state.language?.cardTitle?.personalProject[lang]
+  );
+  const packages = useSelector(
+    (state) => state.language?.cardTitle?.packages[lang]
+  );
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [youtube, setYoutube] = useState("");
   const [icon, setIcon] = useState([]);
@@ -74,8 +75,9 @@ export default function LeftCard() {
   return (
     <div className="flex flex-col w-full max-w-[360px]">
       <div className="flex flex-col p-3">
-        <div className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider ">
-          PERSONAL PROJECT
+        <div className="text-xl uppercase font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider ">
+          {personalProject}
+          {/* PERSONAL PROJECT */}
         </div>
       </div>
       <div className="flex flex-col gap-1 m-2 -mt-0.5 backdrop-blur-md rounded-2xl  shadow-lg border border-white/20 ">
@@ -379,7 +381,7 @@ export default function LeftCard() {
               color: "text-gray-500",
               name: "JSON Web Tokens",
             },
-                  {
+            {
               image: "/images/formik.png",
               name: "Formik",
             },
@@ -387,7 +389,6 @@ export default function LeftCard() {
               image: "/images/bcrypt.jpeg",
               name: "bcrypt",
             },
-      
           ]}
           setIcon={setIcon}
           onOpen={onOpen}
@@ -568,8 +569,8 @@ export default function LeftCard() {
         <DrawerContent>
           {() => (
             <>
-              <DrawerHeader className="flex flex-col gap-1 uppercase tracking-widest text-2xl font-extrabold">
-                Packages
+              <DrawerHeader className="flex flex-col text-center gap-1 uppercase tracking-widest text-2xl font-extrabold">
+                {packages}
               </DrawerHeader>
               <DrawerBody>
                 {icon.length > 0 ? (

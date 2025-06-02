@@ -9,15 +9,21 @@ import {
 import { Fade } from "react-awesome-reveal";
 import { useState } from "react";
 import Education from "../Education/Education";
+import { useSelector } from "react-redux";
 
 export default function RightCard() {
+  const lang = useSelector((state) => state.language?.language);
+  const coursesTraining = useSelector(
+    (state) => state.language?.cardTitle?.coursesTraining[lang]
+  );
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [certificate, setCertificate] = useState("");
   return (
     <div className="flex flex-col w-full">
       <div className="flex flex-col p-3">
-        <div className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider ">
-          COURSES & TRAININGS
+        <div className="text-xl uppercase font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider ">
+          {coursesTraining}
+          {/* COURSES & TRAININGS */}
         </div>
       </div>
       <div className="flex flex-col gap-1 m-2 -mt-0.5 backdrop-blur-md rounded-2xl  shadow-lg border border-white/20 ">

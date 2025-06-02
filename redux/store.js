@@ -14,13 +14,13 @@ const rootReducer = combineReducers({
 // Define migrations
 const migrations = {
   0: (state) => state, // 初始版本
-  2: () => undefined,
+  3: () => undefined,
 };
 
 // Persist configuration with version control
 const persistConfig = {
   key: "root",
-  version: 2, // 每当 reducer 结构有变化时就 +1
+  version: 3, // 每当 reducer 结构有变化时就 +1
   storage,
   whitelist: ["language", "lock"], // 可持久化的 slices
 
