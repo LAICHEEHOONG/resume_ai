@@ -1,4 +1,3 @@
-import Course from "../Course/Course";
 import {
   Modal,
   ModalContent,
@@ -15,9 +14,7 @@ import { useSelector } from "react-redux";
 
 export default function Education() {
   const lang = useSelector((state) => state.language?.language);
-  const cardTitle = useSelector(
-    (state) => state.language?.cardTitle
-  );
+  const cardTitle = useSelector((state) => state.language?.cardTitle);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [certificate, setCertificate] = useState("");
   return (
@@ -32,7 +29,6 @@ export default function Education() {
           <div className="flex gap-4 items-center">
             <div className="tracking-widest uppercase py-1 font-semibold ">
               {cardTitle.nationalCentralUniversity[lang]}
-              {/* National Central University */}
             </div>
             <Bounce>
               <Button
@@ -55,10 +51,9 @@ export default function Education() {
 
           <div>
             <div className="flex gap-4 items-center">
-              <div className="text-default-400 text-sm tracking-widest ">{
-              // `Department of Electrical Engineering`
-                cardTitle.departmentOfElectricalEngineering[lang]
-              }</div>
+              <div className="text-default-400 text-sm tracking-widest ">
+                {cardTitle.departmentOfElectricalEngineering[lang]}
+              </div>
               <Bounce>
                 <Button
                   isIconOnly
@@ -76,21 +71,17 @@ export default function Education() {
               </Bounce>
             </div>
             <div className="text-default-400 text-sm tracking-widest h-[34px] flex items-center">
-              {
-              // `Taiwan Taoyuan City`
-                cardTitle.taiwanTaoyuanCity[lang]
-              }</div>
+              {cardTitle.taiwanTaoyuanCity[lang]}
+            </div>
             <div className="text-default-400 text-sm tracking-widest h-[34px] flex items-center">{`2010 - 2011`}</div>
-            <div className="text-default-400 text-sm tracking-widest h-[34px] flex items-center">{
-            // `(I didn’t complete the program)`
-              cardTitle.iDidntCompletetheProgram[lang]
-            }</div>
+            <div className="text-default-400 text-sm tracking-widest h-[34px] flex items-center">
+              {cardTitle.iDidntCompletetheProgram[lang]}
+            </div>
           </div>
         </div>
         <div className="flex flex-col gap-1 p-2 ">
           <div className="flex gap-4 items-center">
             <div className="tracking-widest uppercase py-1 font-semibold ">
-              {/* Yuk Choy High School */}
               {cardTitle.yukChoyHighSchool[lang]}
             </div>
             <Bounce>
@@ -114,10 +105,9 @@ export default function Education() {
 
           <div>
             <div className="flex gap-4 items-center ">
-              <div className="text-default-400 text-sm tracking-widest">{
-              // `Science Class`
-                cardTitle.scienceClass[lang]
-              }</div>
+              <div className="text-default-400 text-sm tracking-widest">
+                {cardTitle.scienceClass[lang]}
+              </div>
               <Bounce>
                 <Button
                   isIconOnly
@@ -149,58 +139,12 @@ export default function Education() {
                 </Button>
               </Bounce>
             </div>
-            <div className="text-default-400 text-sm tracking-widest h-[34px] flex items-center">{
-            // `Malaysia Ipoh`
-              cardTitle.malaysiaIpoh[lang]
-            }</div>
+            <div className="text-default-400 text-sm tracking-widest h-[34px] flex items-center">
+              {cardTitle.malaysiaIpoh[lang]}
+            </div>
             <div className="text-default-400 text-sm tracking-widest h-[34px] flex items-center">{`2004 - 2009`}</div>
-            {/* <div className="text-default-400 text-sm tracking-widest">{`(I didn’t complete the program)`}</div> */}
           </div>
         </div>
-
-        {/* <Course
-          course="The Server Side with NEXT.JS"
-          year="2025"
-          certificate={"/images/next.jpg"}
-          setCertificate={setCertificate}
-          onOpen={onOpen}
-        />
-
-        <Course
-          course="The Beginning with GIT & Github course"
-          year="2023"
-          certificate={"/images/githubCer.jpg"}
-          setCertificate={setCertificate}
-          onOpen={onOpen}
-        />
-        <Course
-          course="The complete React 18 Fullstack course"
-          year="2022"
-          certificate={"/images/reactCer.jpg"}
-          setCertificate={setCertificate}
-          onOpen={onOpen}
-        />
-        <Course
-          course="The Complete Web Development Bootcamp"
-          year="2020"
-          certificate={"/images/bootcamp.jpg"}
-          setCertificate={setCertificate}
-          onOpen={onOpen}
-        />
-        <Course
-          course="JavaScript Course: From Zero to Expert!"
-          year="2020"
-          certificate={"/images/javascript.jpg"}
-          setCertificate={setCertificate}
-          onOpen={onOpen}
-        />
-        <Course
-          course="Responsive Website with HTML and CSS"
-          year="2019"
-          certificate={"/images/html_css.jpg"}
-          setCertificate={setCertificate}
-          onOpen={onOpen}
-        /> */}
       </div>
 
       <Modal

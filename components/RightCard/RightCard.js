@@ -9,7 +9,9 @@ import {
 import { Fade } from "react-awesome-reveal";
 import { useState } from "react";
 import Education from "../Education/Education";
+import Employment from "../Employment/Employment";
 import { useSelector } from "react-redux";
+
 
 export default function RightCard() {
   const lang = useSelector((state) => state.language?.language);
@@ -72,6 +74,7 @@ export default function RightCard() {
         />
       </div>
       <Education />
+      <Employment />
 
       <Modal
         isOpen={isOpen}

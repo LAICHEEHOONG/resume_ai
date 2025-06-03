@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import AccessDenied from "@/components/AccessDenied";
 import Top from "@/components/top/Top";
 import { Fade } from "react-awesome-reveal";
-import Project from "@/components/Project/Project";
+// import Project from "@/components/Project/Project";
 import RightCard from "@/components/RightCard/RightCard";
 import LeftCard from "@/components/LeftCard/LeftCard";
 

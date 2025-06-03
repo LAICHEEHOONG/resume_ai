@@ -67,6 +67,34 @@ const initialState = {
       en: "Packages",
       zh: "软件包",
     },
+    employmentHistory: {
+      en: "Employment History",
+      zh: "工作经历",
+    },
+    salesAdvisor: {
+      en: "Sales Advisor",
+      zh: "销售顾问",
+    },
+    owner: {
+      en: "Store Owner",
+      zh: "店主",
+    },
+    malaysiaPerakSungaiSiput: {
+      en: "Perak Sungai Siput",
+      zh: "霹雳和丰",
+    },
+    euYanSang: {
+      en: "Eu Yan Sang",
+      zh: "余仁生",
+    },
+    retailSales: {
+      en: "Retail Sales",
+      zh: "门市销售",
+    },
+    stockKeeper: {
+      en: "Stock Keeper",
+      zh: "库存管理员",
+    },
   }
   
 
