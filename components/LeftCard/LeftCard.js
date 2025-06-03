@@ -54,6 +54,7 @@ import {
 import { FaBootstrap, FaReact } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { useSelector } from "react-redux";
+import AboutMe from "../AboutMe/AboutMe";
 
 export default function LeftCard() {
   const lang = useSelector((state) => state.language?.language);
@@ -74,6 +75,7 @@ export default function LeftCard() {
 
   return (
     <div className="flex flex-col w-full max-w-[360px]">
+      <AboutMe />
       <div className="flex flex-col p-3">
         <div className="text-xl uppercase font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider ">
           {personalProject}

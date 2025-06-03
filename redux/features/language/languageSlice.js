@@ -95,6 +95,10 @@ const initialState = {
       en: "Stock Keeper",
       zh: "库存管理员",
     },
+    contactInformation: {
+      en: "Contact Information",
+      zh: "联系方式",
+    },
   }
   
 
