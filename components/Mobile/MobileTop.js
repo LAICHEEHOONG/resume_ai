@@ -14,7 +14,7 @@ export default function MobileTop() {
   );
 
   return (
-    <div className="flex-col">
+    <div className="flex-col p-1">
       <div className="flex gap-2 justify-center items-center">
         <div>
           <Avatar

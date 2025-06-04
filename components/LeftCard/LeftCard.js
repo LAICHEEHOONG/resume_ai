@@ -79,7 +79,6 @@ export default function LeftCard() {
       <div className="flex flex-col p-3 pt-4">
         <div className="text-xl uppercase font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider ">
           {personalProject}
-          {/* PERSONAL PROJECT */}
         </div>
       </div>
       <div className="flex flex-col  m-2 -mt-0.5 backdrop-blur-md rounded-2xl  shadow-lg border border-white/20 ">
