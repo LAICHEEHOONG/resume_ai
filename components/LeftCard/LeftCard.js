@@ -76,13 +76,13 @@ export default function LeftCard() {
   return (
     <div className="flex flex-col w-full max-w-[360px]">
       <AboutMe />
-      <div className="flex flex-col p-3">
+      <div className="flex flex-col p-3 pt-4">
         <div className="text-xl uppercase font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider ">
           {personalProject}
           {/* PERSONAL PROJECT */}
         </div>
       </div>
-      <div className="flex flex-col gap-1 m-2 -mt-0.5 backdrop-blur-md rounded-2xl  shadow-lg border border-white/20 ">
+      <div className="flex flex-col  m-2 -mt-0.5 backdrop-blur-md rounded-2xl  shadow-lg border border-white/20 ">
         <PersonalProject
           project="StockbalX"
           youtube="I6ZF1SkczMU"
@@ -597,7 +597,6 @@ export default function LeftCard() {
                                 width={40}
                               />
                             )}
-                            {/* <item.icon className={`w-10 h-10 ${item.color}`} /> */}
                           </div>
                         </CardBody>
                       </Card>

@@ -6,7 +6,7 @@ export default function Employment() {
 
   return (
     <div className="flex flex-col w-full">
-      <div className="flex flex-col p-3">
+      <div className="flex flex-col p-4">
         <div className="text-xl uppercase font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider ">
           {cardTitle.employmentHistory[lang]}
         </div>
