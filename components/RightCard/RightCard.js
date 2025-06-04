@@ -38,35 +38,35 @@ export default function RightCard() {
         />
 
         <Course
-          course="The Beginning with GIT & Github course"
+          course="The Beginning with GIT & Github"
           year="2023"
           certificate={"/images/githubCer.jpg"}
           setCertificate={setCertificate}
           onOpen={onOpen}
         />
         <Course
-          course="The complete React 18 Fullstack course"
+          course="complete React 18 Fullstack"
           year="2022"
           certificate={"/images/reactCer.jpg"}
           setCertificate={setCertificate}
           onOpen={onOpen}
         />
         <Course
-          course="The Complete Web Development Bootcamp"
+          course="Web Development Bootcamp"
           year="2020"
           certificate={"/images/bootcamp.jpg"}
           setCertificate={setCertificate}
           onOpen={onOpen}
         />
         <Course
-          course="JavaScript Course: From Zero to Expert!"
+          course="JavaScript From Zero to Expert!"
           year="2020"
           certificate={"/images/javascript.jpg"}
           setCertificate={setCertificate}
           onOpen={onOpen}
         />
         <Course
-          course="Responsive Website with HTML and CSS"
+          course="Responsive with HTML and CSS"
           year="2019"
           certificate={"/images/html_css.jpg"}
           setCertificate={setCertificate}
