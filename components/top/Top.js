@@ -29,15 +29,15 @@ export default function Top() {
           <Button
             isIconOnly
             aria-label="lang"
-            color="danger"
+            color="success"
             radius="full"
             variant="flat"
-            size="sm"
+            
             onPress={() => {
               dispatch(setLanguage(language === "en" ? "zh" : "en"));
             }}
           >
-            <TranslateIcon className="text-white" fontSize="small" />
+            <TranslateIcon className="" fontSize="small" />
           </Button>
         </div>
         <div className="text-default-400 tracking-widest">{title}</div>
