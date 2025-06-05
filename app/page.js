@@ -26,7 +26,6 @@ export default function Home() {
           <div className=" min-h-screen bg-[url('/images/b26.jpg')] bg-cover bg-center bg-no-repeat w-[900px] ">
             <Top />
             <div className="flex justify-center p-2 ">
-              {/* <Project /> */}
               <LeftCard />
               <RightCard />
             </div>
@@ -38,10 +37,6 @@ export default function Home() {
           <div className=" min-h-screen bg-[url('/images/b26.jpg')] bg-cover bg-center bg-no-repeat w-[900px] p-2">
             <MobileTop />
             <MobileAccordion />
-            {/* <div className="flex justify-center p-2 ">
-              <LeftCard />
-              <RightCard />
-            </div> */}
           </div>
         </div>
       )}

@@ -40,13 +40,13 @@ export default function MobileTop() {
               <TranslateIcon className="" fontSize="small" />
             </Button>
           </div>
-          <div className="text-default-400 tracking-widest text-xs">
+          <div className="text-default-400 tracking-wide sm:tracking-widest text-xs sm:text-base">
             {title}
           </div>
         </div>
       </div>
 
-      <div className="text-small mt-3 tracking-wider font-semibold">
+      <div className="text-small mt-3 p-2 tracking-wider font-semibold">
         <TypeAnimation
           key={`description-${language}`} // Add key to force remount on language change
           sequence={[description]}

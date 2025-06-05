@@ -15,7 +15,8 @@ import {
 } from "@heroui/react";
 import { Fade } from "react-awesome-reveal";
 import { useState } from "react";
-import PersonalProject from "./PersonalProject";
+// import PersonalProject from "./PersonalProject";
+import PersonalProject from "../LeftCard/PersonalProject";
 
 import {
   SiNextui,
@@ -53,9 +54,9 @@ import {
 import { FaBootstrap, FaReact } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { useSelector } from "react-redux";
-import AboutMe from "../AboutMe/AboutMe";
+// import AboutMe from "../AboutMe/AboutMe";
 
-export default function LeftCard() {
+export default function MobileProject() {
   const lang = useSelector((state) => state.language?.language);
   const personalProject = useSelector(
     (state) => state.language?.cardTitle?.personalProject[lang]
@@ -73,14 +74,9 @@ export default function LeftCard() {
   const onOpenChangeDrawer = () => setIsOpenDrawer(!isOpenDrawer);
 
   return (
-    <div className="flex flex-col w-full max-w-[360px]">
-      <AboutMe />
-      <div className="flex flex-col p-3 pt-4">
-        <div className="text-xl uppercase font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 tracking-wider ">
-          {personalProject}
-        </div>
-      </div>
-      <div className="flex flex-col  m-2 -mt-0.5 backdrop-blur-md rounded-2xl  shadow-lg border border-white/20 ">
+    <div className="flex flex-col">
+
+      <div className="flex flex-col  ">
         <PersonalProject
           project="StockbalX"
           youtube="I6ZF1SkczMU"
@@ -541,9 +537,9 @@ export default function LeftCard() {
           {(onClose) => (
             <>
               <ModalBody className="p-2">
-                <Fade className="flex flex-col">
+                <Fade className="flex flex-col ">
                   <div className="w-full max-w-[1200px]">
-                    <div className="relative overflow-hidden rounded-lg w-full aspect-video">
+                    <div className="relative overflow-hidden rounded-xl w-full aspect-video">
                       <iframe
                         className="absolute inset-0 w-full h-full rounded-lg"
                         src={`https://www.youtube.com/embed/${youtube}`}

@@ -27,7 +27,7 @@ export default function PersonalProject({
         {project}
       </div>
       <div className="flex gap-4 items-center ">
-        <div className="text-default-400 text-sm tracking-widest">{`${developedIn} ${year}`}</div>
+        <div className="text-default-400 text-xs sm:text-sm tracking-widest">{`${developedIn} ${year}`}</div>
         <div className="flex items-center gap-2">
           {web ? (
             <Bounce>

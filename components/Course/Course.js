@@ -11,7 +11,7 @@ export default function Course({ course, year, certificate, setCertificate, onOp
   );
   return (
     <div className="flex flex-col gap-1 p-2 ">
-      <div className="tracking-widest uppercase py-1 font-semibold ">
+      <div className="tracking-wider text-sm sm:text-base sm:tracking-widest uppercase py-1 font-semibold ">
         {course}
       </div>
       <div className="flex gap-4 items-center ">
