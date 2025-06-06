@@ -29,7 +29,7 @@ export default function MobileTop() {
             <Button
               isIconOnly
               aria-label="lang"
-              color="success"
+              color="default"
               radius="full"
               variant="flat"
               size="sm"

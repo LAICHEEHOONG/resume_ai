@@ -29,7 +29,7 @@ export default function Top() {
           <Button
             isIconOnly
             aria-label="lang"
-            color="success"
+            color="default"
             radius="full"
             variant="flat"
             
