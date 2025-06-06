@@ -15,7 +15,7 @@ export default function MobileEmployment() {
       <div className="flex flex-col">
         <div className="flex flex-col gap-1 p-2 ">
           <div className="flex gap-4 items-center">
-            <div className="tracking-widest uppercase py-1 font-semibold ">
+            <div className="tracking-widest uppercase py-1 font-semibold">
               {"PH&CO"}
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function MobileEmployment() {
         </div>
         <div className="flex flex-col gap-1 p-2 ">
           <div className="flex gap-4 items-center">
-            <div className="tracking-widest uppercase py-1 font-semibold ">
+            <div className="tracking-wider uppercase py-1 font-semibold ">
               {"NANA MART Convenience Store"}
             </div>
           </div>
