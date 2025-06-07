@@ -58,9 +58,9 @@ import { useSelector } from "react-redux";
 
 export default function MobileProject() {
   const lang = useSelector((state) => state.language?.language);
-  const personalProject = useSelector(
-    (state) => state.language?.cardTitle?.personalProject[lang]
-  );
+  // const personalProject = useSelector(
+  //   (state) => state.language?.cardTitle?.personalProject[lang]
+  // );
   const packages = useSelector(
     (state) => state.language?.cardTitle?.packages[lang]
   );

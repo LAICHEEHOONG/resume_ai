@@ -5,11 +5,11 @@ import { useSelector } from "react-redux";
 import AccessDenied from "@/components/AccessDenied";
 import Top from "@/components/top/Top";
 import { Fade } from "react-awesome-reveal";
-// import Project from "@/components/Project/Project";
 import RightCard from "@/components/RightCard/RightCard";
 import LeftCard from "@/components/LeftCard/LeftCard";
 import MobileTop from "@/components/Mobile/MobileTop";
 import MobileAccordion from "@/components/Mobile/MobileAccordion";
+import QRCodeGenerator from "@/components/QRCode";
 
 export default function Home() {
   const lock = useSelector((state) => state.lock?.lock);
@@ -29,6 +29,7 @@ export default function Home() {
               <LeftCard />
               <RightCard />
             </div>
+            <QRCodeGenerator />
           </div>
         </div>
       )}

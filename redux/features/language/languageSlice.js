@@ -99,9 +99,19 @@ const initialState = {
       en: "Contact Information",
       zh: "联系方式",
     },
-  }
-  
-
+    resumeLaicheehoong: {
+      en: "Resume | LAI CHEE HOONG",
+      zh: "简历 | 赖志宏",
+    },
+    scanTheQRCodeToSeeItLive: {
+      en: "Scan the QR code to see it live ✨",
+      zh: "扫描二维码查看实时效果 ✨",
+    },
+    thisWebResumeWasFullyDevelopedByMeUsingNextJs: {
+      en: "This web resume was fully developed by me using Next.js",
+      zh: "这个网页简历是我完全使用 Next.js 开发的",
+    },
+  },
 };
 
 export const languageSlice = createSlice({

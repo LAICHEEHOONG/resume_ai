@@ -5,6 +5,7 @@ import MobileProject from "./MobileProject";
 import MobileCourse from "./MobileCourse";
 import MobileEducation from "./MobileEducation";
 import MobileEmployment from "./MobileEmployment";
+import QRCodeGenerator from "../QRCode";
 
 export default function MobileAccordion() {
   const lang = useSelector((state) => state.language?.language);
@@ -77,6 +78,7 @@ export default function MobileAccordion() {
         <MobileEmployment />
         </AccordionItem>
       </Accordion>
+      <QRCodeGenerator />
     </div>
   );
 }
