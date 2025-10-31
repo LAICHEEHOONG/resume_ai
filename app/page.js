@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <Fade>
       <LockStatus />
-      {lock && (
+      {/* {lock && (
         <div>
           <AccessDenied />
         </div>
@@ -40,7 +40,32 @@ export default function Home() {
             <MobileAccordion />
           </div>
         </div>
-      )}
+      )} */}
+      {/* {lock && (
+        <div>
+          <AccessDenied />
+        </div>
+      )} */}
+      {
+        <div className="w-full md:flex hidden justify-center">
+          <div className=" min-h-screen bg-[url('/images/_.jpeg')] bg-cover bg-center bg-no-repeat w-[900px] ">
+            <Top />
+            <div className="flex justify-center p-2 ">
+              <LeftCard />
+              <RightCard />
+            </div>
+            <QRCodeGenerator />
+          </div>
+        </div>
+      }
+      {
+        <div className="w-full md:hidden flex justify-center">
+          <div className=" min-h-screen bg-[url('/images/_.jpeg')] bg-cover bg-center bg-no-repeat w-[900px] p-2">
+            <MobileTop />
+            <MobileAccordion />
+          </div>
+        </div>
+      }
     </Fade>
   );
 }

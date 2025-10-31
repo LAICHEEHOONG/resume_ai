@@ -177,7 +177,7 @@ export default function LeftCard() {
         <PersonalProject
           project="Allcareok.com"
           youtube="R79AKS-NLqU"
-          web="https://www.allcareok.com/"
+          // web="https://www.allcareok.com/"
           github="https://github.com/LAICHEEHOONG/allcareok"
           year="2024"
           icon={[
